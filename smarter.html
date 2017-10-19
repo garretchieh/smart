@@ -1,0 +1,133 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Smarter</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+   
+    
+
+    <script src="main.js"></script>
+    
+</head>
+
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+ 	<div class="container-fluid">
+ 		<div class="navbar-header">
+ 			<a href="#" class="navbar-brand">決策分析系統</a>
+ 		</div>
+ 		<ul class="nav navbar-nav navbar-right">
+      <li><a href="smart.html"><span class=""></span>smart</a></li>
+      <li><a href="smarts.html"><span class=""></span>smarts</a></li>
+ 			<li><a href="#"><span class=""></span>smarter</a></li>
+ 			
+ 		</ul>
+ 	</div>
+</div>
+<p></br></p>
+<p></br></p>
+<p></br></p>
+	<div class="container">
+    <h1 align="center" style="text-shadow: 2px 2px 3px gray"><font size=7}>Smarter 決策分析</font></h1>
+    <p></br></p>
+    <h3>情境說明:</h3>
+    <h4>&nbsp;&nbsp;&nbsp;&nbsp;當你想從中壢搭車到台中時，有以下四種方案可供選擇，但卻不知道如何做選擇時，</h4>
+    <h4>完成以下表格就可知道最適合你的是哪一種方案囉~</h4>
+    <h3>操作說明:</h3>
+    <pre><font size=4>
+    *請填入數字，每個屬性皆為0~100分，0分為最不滿意，100分為最滿意。
+       例如:
+          高鐵的速度是你覺得最快的就填入100，台鐵速度較慢一些填入80，以此類推。
+
+    *另外權重部分，請將你覺得最重要的屬性設為1，第二重要的設為2，以此類推。
+       例如:
+          某一使用者心目中屬性重要性排序為:[安全性>速度>舒適度>可搭乘人數>價錢]。
+                                   則設為   1  > 2  >  3  >    4    >  5
+    </font></pre>
+    <p></br></p>
+   <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>權重</th>
+        <th>高鐵</th>
+        <th>台鐵</th>
+        <th>客運</th>
+        <th>開車</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">速度</th>
+        <td><input type="text" class="input" id="wi_one"></td>
+        <td><input type="text" class="input" id="hsr_speed"></td>
+        <td><input type="text" class="input" id="train_speed"></td>
+        <td><input type="text" class="input" id="bus_speed"></td>
+        <td><input type="text" class="input" id="car_speed"></td>
+        
+      </tr>
+      <tr>
+        <th scope="row">舒適度</th>
+        <td><input type="text" class="input" id="wi_two"></td>
+        <td><input type="text" class="input" id="hsr_comfortable"></td>
+        <td><input type="text" class="input" id="train_comfortable"></td>
+        <td><input type="text" class="input" id="bus_comfortable"></td>
+        <td><input type="text" class="input" id="car_comfortable"></td>
+        
+      </tr>
+      <tr>
+        <th scope="row">安全性</th>
+        <td><input type="text" class="input" id="wi_three"></td>
+        <td><input type="text" class="input" id="hsr_safety"></td>
+        <td><input type="text" class="input" id="train_safety"></td>
+        <td><input type="text" class="input" id="bus_safety"></td>
+        <td><input type="text" class="input" id="car_safety"></td>
+        
+      </tr>
+      <tr>
+        <th scope="row">價錢</th>
+        <td><input type="text" class="input" id="wi_four"></td>
+        <td><input type="text" class="input" id="hsr_price"></td>
+        <td><input type="text" class="input" id="train_price"></td>
+        <td><input type="text" class="input" id="bus_price"></td>
+        <td><input type="text" class="input" id="car_price"></td>
+       
+      </tr>
+      <tr>
+        <th scope="row">可搭乘人數</th>
+        <td><input type="text" class="input" id="wi_five"></td>
+        <td><input type="text" class="input" id="hsr_person"></td>
+        <td><input type="text" class="input" id="train_person"></td>
+        <td><input type="text" class="input" id="bus_person"></td>
+        <td><input type="text" class="input" id="car_person"></td>
+        
+      </tr>
+      <tr>
+        <th scope="row">結果</th>
+		<td></td>
+        <td id="hsr"></td>
+        <td id="train"></td>
+        <td id="bus"></td>
+        <td id="car"></td>
+      </tr>    
+    </tbody>
+  </table>
+  <button type="button" id="smarter" class="btn btn-success" style="margin-left:10px; ">smarter</button>
+  <p></br></p>
+  <p></br></p>
+  <p></br></p>
+</div>
+
+
+</body>
+</html>
